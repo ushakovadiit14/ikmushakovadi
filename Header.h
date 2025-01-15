@@ -11,4 +11,4 @@ string delenie(const string& a, const string& b);
 bool oshibki(const string& input);
 
 // функция, чтобы убрать знак минус (если он вообще есть)
-string removeSign(const string& input);
+string neminus(const string& input);
