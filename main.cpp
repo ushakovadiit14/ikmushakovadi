@@ -2,7 +2,7 @@
 #include <string>    // для работы со строками
 #include <algorithm> // для функции
 #include <cctype>    // для функции 
-#include "Header.h" // для хедера
+#include "Header.h" // для заголовочного файла
 
 using namespace std;
 
@@ -46,7 +46,7 @@ int main()
     string result = delenie(neminus(chislo_a), neminus(chislo_b));
 
     // определяем итоговый знак 
-    bool otricresult = (chislo_a[0] == '-') ^ (chislo_b[0] == '-'); // исключающее ИЛИ
+    bool otricresult = (chislo_a[0] == '-' && chislo_b[0] != '-') || (chislo_a[0] != '-' && chislo_b[0] == '-');
 
     // если результат должен быть с "-" и не равен "0"
     if ( otricresult && result != "0")
