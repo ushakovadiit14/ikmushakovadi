@@ -40,13 +40,13 @@ int main()
     while (!oshibki(chislo_b)); // цикл будет, пока есть ошибки при вводе
 
     // выполняем деление и удаляем знак, если он есть
-    string result = delenie(removeSign(chislo_a), removeSign(chislo_b));
+    string result = delenie(neminus(chislo_a), neminus(chislo_b));
 
     // определяем итоговый знак 
-    bool negativeResult = (chislo_a[0] == '-') ^ (chislo_b[0] == '-'); // исключающее ИЛИ
+    bool otricresult = (chislo_a[0] == '-') ^ (chislo_b[0] == '-'); // исключающее ИЛИ
 
     // если результат должен быть с "-" и не равен "0"
-    if (negativeResult && result != "0")
+    if ( otricresult && result != "0")
     {
         result = "-" + result; // то добавляем знак "-"
     }
